@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: linear-gradient(135deg, #f8f9fa 0%, #ffe4c4 100%);
+        font-family: "Segoe UI", Arial, sans-serif;
+        min-height: 100vh;
+      }
+      .navbar {
+        display: flex;
+        align-items: center;
+        background-color: #fff7e6;
+        padding: 16px 32px;
+        border-bottom: 2px solid #e0c097;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      }
+      .navbar img {
+        margin-right: 14px;
+        border-radius: 50%;
+        background: #ffe4c4;
+        border: 1px solid #e0c097;
+      }
+      .navbar div {
+        font-size: 24px;
+        font-weight: 600;
+        color: #a0522d;
+        letter-spacing: 1px;
+      }
+      .card {
+        display: flex;
+        justify-content: center;
+        width: 440px;
+        margin: 40px auto;
+        border: 1px solid #e0c097;
+        border-radius: 12px;
+        box-shadow: 0 4px 16px rgba(160, 82, 45, 0.08);
+        background: #fff;
+        transition: box-shadow 0.2s;
+      }
+      .card:hover {
+        box-shadow: 0 8px 32px rgba(160, 82, 45, 0.16);
+      }
+      .card-header {
+        background-color: #ffe4c4;
+        padding: 16px;
+        border-bottom: 1px solid #e0c097;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        color: #a0522d;
+        border-radius: 12px 12px 0 0;
+      }
+      .card-body {
+        padding: 18px 14px;
+      }
+      .card-body > div {
+        font-size: 17px;
+        font-weight: 500;
+        margin-bottom: 10px;
+        color: #a0522d;
+      }
+      .card-body table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+      }
+      .card-body table td {
+        padding: 10px 8px;
+        border: none;
+        vertical-align: middle;
+      }
+      .card-body table td:first-child {
+        font-weight: 500;
+        background-color: #fff7e6;
+        width: 42%;
+        color: #a0522d;
+        border-radius: 6px 0 0 6px;
+      }
+      .card-body table td input,
+      .card-body table td select {
+        width: 98%;
+        padding: 8px 10px;
+        border: 1px solid #e0c097;
+        border-radius: 6px;
+        font-size: 15px;
+        background: #f8f9fa;
+        transition: border-color 0.2s;
+      }
+      .card-body table td input:focus,
+      .card-body table td select:focus {
+        border-color: #a0522d;
+        outline: none;
+      }
+      .card-body table td input[type="radio"] {
+        width: auto;
+        margin-right: 6px;
+        accent-color: #a0522d;
+      }
+      .img-section {
+        padding: 18px 10px;
+        border-top: 1px solid #e0c097;
+        background: #fff7e6;
+        border-radius: 0 0 12px 0;
+        display: flex;
+
+        justify-content: center;
+      }
+      .img-section img {
+        border-radius: 50%;
+        background: #ffe4c4;
+        border: 1px solid #e0c097;
+      }
+      .card-main {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+      }
+      @media (max-width: 600px) {
+        .card {
+          width: 98%;
+          flex-direction: column;
+        }
+        .card-main {
+          flex-direction: column;
+        }
+        .img-section {
+          border-radius: 0 0 12px 12px;
+        }
+      }
+      .book-btn {
+        background-color: #a0522d;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        padding: 10px 16px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+      }
+      .book-btn:hover {
+        background-color: #8b4513;
+      }
+      .footer {
+        text-align: center;
+        padding: 12px 0;
+        font-size: 16px;
+        color: #a0522d;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <div>
+        <img
+          src="https://cdn.vectorstock.com/i/1000v/13/60/modern-tour-bus-symbol-stylized-icon-for-logo-vector-40341360.jpg"
+          height="40px"
+          width="40px"
+          alt=""
+        />
+      </div>
+      <div>Bus Seat Book</div>
+    </div>
+    <div class="card">
+      <div>
+        <div class="card-header">Wlcome to Bus booking system</div>
+        <div class="card-main">
+          <section class="card-body">
+            <table>
+              <tr>
+                <td>Select Seat Mode</td>
+                <td><input type="checkbox" /> Sleeper</td>
+                <td><input type="checkbox" /> Seater</td>
+              </tr>
+              <tr>
+                <td>Select Payment Mode</td>
+                <td>
+                  <input type="radio" name="payment" value="credit" /> Credit
+                  Card
+                </td>
+                <td>
+                  <input type="radio" name="payment" value="debit" /> Debit Card
+                </td>
+              </tr>
+            </table>
+            <div class="footer">Thank you for using our service</div>
+          </section>
+          <section class="img-section">
+            <img
+              src="https://play-lh.googleusercontent.com/BuzP5N7JoG6Dueh2y3Zu6NUM9swvtZiBR-oW0iZbxzaVlsqDMLcbhAMllbNaqMFbuw=w240-h480-rw"
+              alt=""
+              height="40px"
+              width="40px"
+            />
+          </section>
+         
+          </section>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
