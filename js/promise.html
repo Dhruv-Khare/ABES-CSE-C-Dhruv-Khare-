@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <input id="password" type="text" name="pass">
+    <button onclick="checkPassword()">submit</button>
+
+    <script>
+        const checkPassword = () => {
+            const password = document.querySelector("#password");
+            const pass = password.value;
+            new Promise((resolve, reject) => {
+                console.log(pass);
+                if (pass.length > 8 && /[0-9]/.test(pass) && /[#@]/.test(pass)) {
+                    resolve("password is ok");
+                } else {
+                    reject("password length must be greater than 8 and contain at least one number and one special character");
+                }
+            })
+            .then((msg) => {
+                alert(msg);
+            })
+            .catch((err) => {
+                alert(err);
+            });
+        }
+    </script>
+    
+</body>
+</html>

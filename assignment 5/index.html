@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      display: flex;
+      flex-direction: row;
+      background-color: rgb(180, 226, 105);
+    }
+    .header {
+      margin: 20px;
+    }
+    .logo {
+      border: 2px solid black;
+      border-radius: 50%;
+      height: 150px;
+      width: 150px;
+    }
+    #logo {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+    }
+    img {
+      width: 150px;
+      height: 150px;
+    }
+    .main {
+      margin-top: 500px;
+    }
+    .main {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100vw;
+    }
+    .card{
+        display: flex;
+        justify-content: space-between;
+
+    }
+    .prod-price{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .cardBody {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  gap: 20px; /* space between cards */
+}
+
+.card {
+  border: 1px solid #333;
+  padding: 10px;
+  border-radius: 8px;
+  background: #fff;
+}
+
+  </style>
+  <body>
+    <div class="body">
+      <div class="header">
+        <div class="logo">
+          <img id="logo" src="../assets/community1.jpg" alt="" />
+        </div>
+      </div>
+      <div id="main">
+        <div class="cardBody"></div>
+        
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
