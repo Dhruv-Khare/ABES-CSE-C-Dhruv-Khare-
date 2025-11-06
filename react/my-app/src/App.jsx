@@ -5,11 +5,12 @@ import "bootstrap/dist/css/bootstrap.css";
 import Header from "./component/Header.jsx";
 import Body from "./component/body.jsx";
 import Footer from "./component/Footer.jsx";
+import Link from "./component/Link.jsx";
 
 function App() {
   return (
     <div>
-      <Navbar logo="https://erp.abes.ac.in/OnlineEnquiry/Images/ABESEngineer.jpeg"/>
+      {/* <Navbar logo="https://erp.abes.ac.in/OnlineEnquiry/Images/ABESEngineer.jpeg"/>
       <Header />
       <Body />
       <div style={{ display: 'flex', gap: '20px', padding: '20px' }}>
@@ -29,7 +30,8 @@ function App() {
         rate="4.5"
       />
       </div>
-      <Footer/>
+      <Footer/> */}
+      <Link/>
     </div>
   );
 }
